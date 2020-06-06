@@ -1,0 +1,2 @@
+include ':app', ':routermodel1', ':basercorelib',"buildSrcNew"
+rootProject.name='StudyProject'

@@ -1,0 +1,36 @@
+//依赖 groovy 和 maven 插件
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+repositories {
+    google()
+    jcenter()
+}
+dependencies {
+    implementation 'com.android.tools.build:gradle:3.5.3'
+
+    //依赖 gradle Api仓库
+    implementation gradleApi()
+    // 依赖 groovy本地仓库
+    implementation localGroovy()
+
+    //依赖 ASM库文件
+    implementation 'org.ow2.asm:asm:8.0.1'
+    implementation 'org.ow2.asm:asm-commons:8.0.1'
+
+}
+
+// maven仓库group名称
+group = 'cn.wyc.plugin'
+// maven仓库插件版本号
+version = '1.1.2'
+
+//maven 仓库发布
+uploadArchives{
+
+    repositories{
+        mavenDeployer{
+            repository(url:uri('../asm_lifecycle_repo'))
+        }
+    }
+}
