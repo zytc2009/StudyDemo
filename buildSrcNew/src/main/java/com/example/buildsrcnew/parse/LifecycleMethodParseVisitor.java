@@ -94,7 +94,7 @@ public class LifecycleMethodParseVisitor extends MethodVisitor {
         mv.visitVarInsn(ISTORE, 6);
         Label l3 = new Label();
         mv.visitLabel(l3);
-        mv.visitFrame(Opcodes.F_FULL, 7, new Object[]{"com/example/studyproject/plugin/annotation/GradeData", "org/json/JSONObject", "java/lang/Class", "[Ljava/lang/reflect/Field;", "[Ljava/lang/reflect/Field;", Opcodes.INTEGER, Opcodes.INTEGER}, 0, new Object[]{});
+        mv.visitFrame(Opcodes.F_FULL, 7, new Object[]{className, "org/json/JSONObject", "java/lang/Class", "[Ljava/lang/reflect/Field;", "[Ljava/lang/reflect/Field;", Opcodes.INTEGER, Opcodes.INTEGER}, 0, new Object[]{});
         mv.visitVarInsn(ILOAD, 6);
         mv.visitVarInsn(ILOAD, 5);
         Label l4 = new Label();
