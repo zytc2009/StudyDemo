@@ -40,6 +40,15 @@ android {
 
             }
         }
+
+
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86"//cpu的类型
+        }
+        sourceSets.main {
+            jniLibs.srcDirs = ['libs']
+        }
+
     }
     buildTypes {
         release {

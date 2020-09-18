@@ -2,12 +2,16 @@ package com.example.studyproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.studyproject.Serialize.SerializeDemo;
 import com.example.studyproject.component.ComponentActivity;
 import com.example.studyproject.design.DesignPatternActivity;
+import com.example.studyproject.jni.JNITest;
 import com.example.studyproject.plugin.annotation.GradeData;
 import com.example.studyproject.plugin.annotation.UserData;
 
@@ -69,5 +73,12 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+    }
+
+    /**
+     * jni测试
+     * */
+    public void onClickJNITest(View view) {
+        Log.e("MainActivity", "onClickJNITest : jni message = " + JNITest.helloInC());
     }
 }
